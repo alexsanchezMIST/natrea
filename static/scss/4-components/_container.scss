@@ -1,0 +1,38 @@
+// ********************
+// CONTAINER
+// ********************
+
+.container {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+
+  @media screen and (max-width: (map-get($breakpoints, "small") - 0.0625rem)) {
+    padding: 0 1rem;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "small")) and (max-width: (map-get($breakpoints, "medium") - 0.0625rem)) {
+    max-width: 40rem; // 640px
+    padding: 0 2rem;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "medium")) and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
+    max-width: 48rem; // 768px
+    padding: 0 3rem;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "large")) and (max-width: (map-get($breakpoints, "xl") - 0.0625rem)) {
+    max-width: 64rem; // 1024px
+    padding: 0 4rem;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "xl")) and (max-width: (map-get($breakpoints, "2xl") - 0.0625rem)) {
+    max-width: 80rem; // 1280px
+    padding: 0 5rem;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "2xl")) {
+    max-width: 96rem; // 1536px
+    padding: 0 6rem;
+  }
+}

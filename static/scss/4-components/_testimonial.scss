@@ -1,0 +1,35 @@
+.testimonial {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 29.375rem;
+  padding: 1.25rem;
+  background-color: rgba($white, 0.9);
+  border: 1px solid map-get($slate, "100");
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -4px rgba($black, 0.1),
+    0 10px 15px -3px rgba($black, 0.1);
+  text-align: center;
+  backdrop-filter: blur(1rem);
+}
+
+.testimonial__avatar {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 100vw;
+  margin-right: 1rem;
+}
+
+.testimonial__copy {
+  font-size: 0.875rem;
+  text-align: start;
+}
+
+#kirkham {
+  position: absolute;
+  right: 0.5rem;
+  bottom: 1rem;
+  z-index: 100;
+}

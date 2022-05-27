@@ -1,0 +1,63 @@
+// ********************
+// SECTION
+// ********************
+
+.section {
+  position: relative;
+
+  /* @media screen and (max-width: (map-get($breakpoints, "small") - 0.0625rem)) {
+    padding: 2.5rem 0;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "small")) and (max-width: (map-get($breakpoints, "medium") - 0.0625rem)) {
+    padding: 3.75rem 0;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "medium")) and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
+    padding: 5rem 0;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "large")) and (max-width: (map-get($breakpoints, "xl") - 0.0625rem)) {
+    padding: 6.25rem 0;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "xl")) and (max-width: (map-get($breakpoints, "2xl") - 0.0625rem)) {
+    padding: 7.5rem 0;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "2xl")) {
+    padding: 8.75rem 0;
+  } */
+
+  &--hero {
+    /*     @media screen and (max-width: (map-get($breakpoints, "small") - 0.0625rem)) {
+      padding: 3.75rem 0;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, "small")) and (max-width: (map-get($breakpoints, "medium") - 0.0625rem)) {
+      padding: 5rem 0;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, "medium")) and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
+      padding: 6.25rem 0;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, "large")) and (max-width: (map-get($breakpoints, "xl") - 0.0625rem)) {
+      padding: 7.5rem 0;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, "xl")) and (max-width: (map-get($breakpoints, "2xl") - 0.0625rem)) {
+      padding: 8.75rem 0;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, "2xl")) {
+      padding: 10rem 0;
+    } */
+  }
+  &--full {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+  }
+}

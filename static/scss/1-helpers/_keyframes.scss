@@ -1,0 +1,22 @@
+@keyframes horizontalScroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translate(-100%);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 25px rgba($amaranth, 0);
+  }
+  100% {
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0px rgba($amaranth, 0);
+  }
+}

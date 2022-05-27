@@ -1,0 +1,316 @@
+// ********************
+// HERO SECTION
+// ********************
+
+#hero {
+  background-color: map-get($slate, "50");
+}
+
+.hero__wrapper {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, min-content));
+  gap: 3.75rem;
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(1, minmax(0, 1fr));
+  }
+}
+
+.hero__left {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.hero__right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.hero__heading {
+  @extend h2;
+  margin-bottom: 0.625rem;
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    margin-bottom: 1.25rem;
+  }
+}
+
+.group__subheading {
+  font-weight: 500;
+  color: map-get($slate, "400");
+  margin-bottom: 1.25rem;
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.btn-wrapper {
+  &.is-centered {
+    text-align: center;
+  }
+}
+
+.btn__text {
+  font-weight: 700;
+  color: map-get($slate, "900");
+  margin-bottom: 0.625rem;
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    margin-bottom: 1.25rem;
+  }
+}
+
+.group__heading {
+  @extend .hero__heading;
+}
+
+.numbers__heading {
+  @extend .group__heading;
+}
+
+.numbers__subheading {
+  @extend .group__subheading;
+}
+
+.section__heading {
+  margin-bottom: 0.625rem;
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    margin-bottom: 1.25rem;
+  }
+}
+
+// ********************
+// ABOUT SECTION
+// ********************
+
+.about__testimonial {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: $amaranth;
+  font-size: 1.125rem;
+  line-height: 1.33;
+  font-weight: 400;
+  color: $white;
+
+  @media screen and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
+    padding: 2.5rem 1.25rem;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    padding: 5rem 2.5rem;
+  }
+}
+
+.about__right {
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    grid-column: span 3 / span 3;
+  }
+}
+
+.testimonial__author {
+  font-weight: 700;
+}
+
+.testimonial__copy {
+  margin-bottom: 1.25rem;
+}
+
+// ********************
+// CONTACT SECTION
+// ********************
+
+.list-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 35.625rem;
+  margin: 1.875rem auto;
+  padding: 3.75rem 2.5rem;
+  background-color: $white;
+  border: 1px solid map-get($slate, "100");
+  border-radius: 0.5rem;
+
+  > h3 {
+    text-align: center;
+  }
+
+  &.is-blue {
+    background-color: rgba($steel, 0.05);
+    border-color: $steel;
+  }
+}
+
+.tier__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 35.625rem;
+  padding: 5rem 2.5rem;
+  background-color: $white;
+  border: 1px solid map-get($slate, "100");
+  box-shadow: 0 25px 50px -12px rgba($black, 0.25);
+}
+
+.tier__heading {
+  text-align: center;
+  margin-bottom: 1.25rem;
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.tier__subheading {
+  @extend .numbers__subheading;
+}
+
+.start__wrapper {
+  @extend .hero__wrapper;
+}
+
+#contact {
+  background-color: map-get($slate, "900");
+
+  > * {
+    position: relative;
+    z-index: 300;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("static/img/natrea-forest.webp");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    mix-blend-mode: overlay;
+    opacity: 0.25;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 200;
+    top: 0;
+    right: -2rem;
+    width: 40rem;
+    height: 100%;
+    background-image: url("static/img/tiger-cutout.webp");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    opacity: 0.7;
+  }
+}
+
+.start__heading {
+  @extend .hero__heading;
+  color: $white;
+}
+
+.start__copy {
+  color: map-get($slate, "100");
+  margin-top: 1.25rem;
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    margin-top: 2.5rem;
+  }
+
+  > strong {
+    color: $white;
+  }
+}
+
+.image--full {
+  width: 100%;
+  height: 37.5rem;
+  object-fit: cover;
+}
+
+#tier {
+  background-image: url("static/img/natrea-dc.webp");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.hero__img {
+  width: 100%;
+  height: auto;
+  box-shadow: 0 25px 50px -12px rgba($black, 0.25);
+}
+
+.section__helmet {
+  width: 100%;
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.875rem;
+  text-align: center;
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    margin-bottom: 3.75rem;
+  }
+}
+
+.phone-icon,
+.mail-icon,
+.location-icon,
+.phone-icon--orange {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.5rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+.phone-icon {
+  background-image: url("static/img/phone.svg");
+}
+
+.mail-icon {
+  background-image: url("static/img/mail.svg");
+}
+
+.location-icon {
+  background-image: url("static/img/location-marker.svg");
+}
+
+.phone-icon--orange {
+  background-image: url("static/img/phone-orange.svg");
+}
+
+.img-wrapper {
+  width: 100%;
+  height: 50rem;
+  background-image: url("static/img/natrea-group.webp");
+  background-repeat: no-repeat;
+  background-position: center top 5rem;
+  background-size: contain;
+  filter: drop-shadow(0 5px 10px rgba($black, 0.5));
+  opacity: 0.85;
+}

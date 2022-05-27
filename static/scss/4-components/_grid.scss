@@ -1,0 +1,14 @@
+@mixin grid($rows, $columns) {
+  display: grid;
+  gap: 1.875rem;
+
+  @media screen and (max-width: (map-get($breakpoints, "lg") - 0.0625rem)) {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    grid-template-rows: repeat($columns, minmax(0, 1fr));
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "lg")) {
+    grid-template-columns: repeat($columns, minmax(0, 1fr));
+    grid-template-rows: repeat($rows, minmax(0, 1fr));
+  }
+}

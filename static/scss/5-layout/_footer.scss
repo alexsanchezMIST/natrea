@@ -1,0 +1,19 @@
+// ********************
+// FOOTER
+// ********************
+
+#footer {
+  padding: 1.25rem 0;
+  background-color: $cello;
+}
+
+.footer__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__copy {
+  color: map-get($slate, "100");
+}

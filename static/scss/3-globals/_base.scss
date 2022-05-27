@@ -1,0 +1,31 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+
+  @media (max-width: (map-get($breakpoints, "medium") - 0.0625rem)) {
+    font-size: 0.875rem; // 14px
+  }
+
+  @media (min-width: map-get($breakpoints, "medium")) and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
+    font-size: 1rem; // 16px
+  }
+
+  @media (min-width: map-get($breakpoints, "large")) and (max-width: (map-get($breakpoints, "xl") - 0.0625rem)) {
+    font-size: 1.125rem; // 18px
+  }
+
+  @media (min-width: map-get($breakpoints, "xl")) and (max-width: (map-get($breakpoints, "2xl") - 0.0625rem)) {
+    font-size: 1.25rem; // 20px
+  }
+
+  @media (min-width: map-get($breakpoints, "2xl")) {
+    font-size: 1.5rem; // 24px
+  }
+}
+
+.main {
+  margin-top: 7rem;
+}
